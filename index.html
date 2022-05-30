@@ -27,63 +27,59 @@
       }
     </style>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-      $(window).on('load', function () {
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
 
-        $.ajax({
-          url: "https://geolocation-db.com/jsonp",
-          jsonpCallback: "callback",
-          dataType: "jsonp",
-          success: function (location) {
-            var data = new Date(),
-              dia = data.getDate().toString().padStart(2, '0'),
-              mes = (data.getMonth() + 1).toString().padStart(2, '0'), //+1 pois no getMonth Janeiro começa com zero.
-              ano = data.getFullYear();
-            
-            data = dia + '/' + mes + '/' + ano;
+      $.ajax({
+        url: "https://geolocation-db.com/jsonp",
+        jsonpCallback: "callback",
+        dataType: "jsonp",
+        success: function (location) {
+          var data = new Date(),
+            dia = data.getDate().toString().padStart(2, '0'),
+            mes = (data.getMonth() + 1).toString().padStart(2, '0'), //+1 pois no getMonth Janeiro começa com zero.
+            ano = data.getFullYear();
+          
+          data = dia + '/' + mes + '/' + ano;
 
-            //AQUI altera o texto ANTES do nome da cidade
-            textoAntesCidade = 'Você e algumas pessoas próximo a ';
-            //AQUI altera o texto DEPOIS do nome da cidade
-            textoDepoisCidade = ' foram selecionadas para ver este vídeo até o dia ';
+          //AQUI altera o texto ANTES do nome da cidade
+          textoAntesCidade = 'Você e algumas mulheres próximas a ';
+          //AQUI altera o texto DEPOIS do nome da cidade
+          textoDepoisCidade = ' foram selecionadas para ver este vídeo até o dia ';
 
-            mostrarData = true; //SE não quiser que a data apareça é só mudar o valor 'true' para 'false' e vice-versa para mostrar novamente 
-            
-            if(location.city)
-              $('#container-cidade').html(textoAntesCidade + location.city + textoDepoisCidade + (mostrarData ? data : ''));
-          }
-        });
+          mostrarData = true; //SE não quiser que a data apareça é só mudar o valor 'true' para 'false' e vice-versa para mostrar novamente 
+          
+          if(location.city)
+            $('#container-cidade').html(textoAntesCidade + location.city + textoDepoisCidade + (mostrarData ? data : ''));
+        }
       });
-    </script>
-    <style>
-      #container-cidade {
-        padding: 1rem;
-        width: 100%;
-        /* AQUI altera a cor de fundo da caixa */
-        background-color: #F33E99;
-        /* AQUI altera a cor da letra */
-        color: #FFFFFF;
-        display: inline-table;
-        /* AQUI altera o tamanho da letra */
-        font-size: 15px;
-        /* AQUI altera a altura da caixa */
-        height: 13px;
-        z-index: 1;
-        position: inherit;
-        top: 0;
-        left: 0;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        text-align: center;
-      }
-    </style>
-  </head>
 
-  <div id="container-cidade">Aguarde um momento...</div>
-    
+  </script>
+  <style>
+    #container-cidade {
+      padding: 1rem;
+      width: 100%;
+      /* AQUI altera a cor de fundo da caixa */
+      background-color: #D0021B;
+      /* AQUI altera a cor da letra */
+      color: #FFFFFF;
+      display: inline-table;
+      /* AQUI altera o tamanho da letra */
+      font-size: 15px;
+      /* AQUI altera a altura da caixa */
+      height: 13px;
+      z-index: 1;
+      position: inherit;
+      top: 0;
+      left: 0;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      text-align: center;
+    }
+  </style>
+
   </head>
   <body>
-    
+    <div id="container-cidade">Aguarde um momento... </div>
     <header class="py-4">
       <div class="container">
         <div class="row justify-content-center">
@@ -92,19 +88,19 @@
             <!-- <img class="img-fluid" src="./assets/img/ultrasecreto.svg"> -->
 
             <!-- Headline -->
-            <h3><strong><span style="color:#FFD700">Profissionais da&nbsp;Medicina America Revelam:</span> A Verdadeira e &Uacute;nica Causa do Sobrepeso Tem a Ver com algo chamado <span style="color:#FFFFFF"><span style="background-color:#000000">PONTO DE AJUSTE</span></span></strong></h3>
+            <h3><strong><span style="color:#FFD700">M&eacute;dicos Estadunidenses&nbsp;Revelam:</span> A Verdadeira e &Uacute;nica Causa do Sobrepeso Tem a Ver Com Algo SIMPLES Conhecido Como&nbsp;<span style="color:#FFFFFF"><span style="background-color:#000000">PONTO DE AJUSTE</span></span></strong></h3>
 
             <p>&nbsp;</p>
 
-            <p><strong>Assista AGORA&nbsp;ao v&iacute;deo e descubra esse segredo guardado a 7 chaves pela ind&uacute;stria</strong></p>
+            <p><strong>Assista AGORA&nbsp;ao v&iacute;deo e descubra como a&nbsp;ind&uacute;stria sempre mentiu para voc&ecirc;</strong></p>
 
             <!-- VSL -->
-            <div id="vid_62324e9796ef4b0009baeddb" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_62324e9796ef4b0009baeddb" src="https://images.converteai.net/d815fe39-ff04-485e-bb34-dd508e30df56/players/62324e9796ef4b0009baeddb/thumbnail.jpg" alt="[MQR] TICKET 97" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_62324e9796ef4b0009baeddb" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_62324e9796ef4b0009baeddb">var s=document.createElement("script");s.src="https://scripts.converteai.net/d815fe39-ff04-485e-bb34-dd508e30df56/players/62324e9796ef4b0009baeddb/player.js",s.async=!0,document.head.appendChild(s);</script>
-            
+            <div id="vid_62324e9796ef4b0009baeddb" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_62324e9796ef4b0009baeddb" src="https://images.converteai.net/d815fe39-ff04-485e-bb34-dd508e30df56/players/62324e9796ef4b0009baeddb/thumbnail.jpg" alt="[MQR] CORE OFFER 97" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_62324e9796ef4b0009baeddb" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_62324e9796ef4b0009baeddb">var s=document.createElement("script");s.src="https://scripts.converteai.net/d815fe39-ff04-485e-bb34-dd508e30df56/players/62324e9796ef4b0009baeddb/player.js",s.async=!0,document.head.appendChild(s);</script>
+
             <!-- Botão -->
             <!-- <div id="cta1" class="mt-4 d-none">
-              <a href="https://pay.kiwify.com.br/8yj82EU" class="a-btn" style="text-decoration: none;">
-                <span class="span-btn">QUERO OBTER ACESSO!</span>
+              <a href="https://pay.kiwify.com.br/P2vjpcL" class="a-btn" style="text-decoration: none;">
+                <span class="span-btn">QUERO ACESSO AO MÉTODO!</span>
                 <span class="span-btn2">(atenção: vagas limitadas)</span>
               </a>
             </div> -->
