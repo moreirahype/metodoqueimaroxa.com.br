@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/com.css">
+
+    <!-- Título da Página -->
+    <title>Método Queima Roxa</title>
+    
+    <style type="text/css">
+      body {
+        color: white;
+        background-image: url("assets/img/bg.jpeg");
+        background-color: rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: darken;
+      }
+    </style>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(window).on('load', function () {
+
+        $.ajax({
+          url: "https://geolocation-db.com/jsonp",
+          jsonpCallback: "callback",
+          dataType: "jsonp",
+          success: function (location) {
+            var data = new Date(),
+              dia = data.getDate().toString().padStart(2, '0'),
+              mes = (data.getMonth() + 1).toString().padStart(2, '0'), //+1 pois no getMonth Janeiro começa com zero.
+              ano = data.getFullYear();
+            
+            data = dia + '/' + mes + '/' + ano;
+
+            //AQUI altera o texto ANTES do nome da cidade
+            textoAntesCidade = 'Você e algumas pessoas próximo a ';
+            //AQUI altera o texto DEPOIS do nome da cidade
+            textoDepoisCidade = ' foram selecionadas para ver este vídeo até o dia ';
+
+            mostrarData = true; //SE não quiser que a data apareça é só mudar o valor 'true' para 'false' e vice-versa para mostrar novamente 
+            
+            if(location.city)
+              $('#container-cidade').html(textoAntesCidade + location.city + textoDepoisCidade + (mostrarData ? data : ''));
+          }
+        });
+      });
+    </script>
+    <style>
+      #container-cidade {
+        padding: 1rem;
+        width: 100%;
+        /* AQUI altera a cor de fundo da caixa */
+        background-color: #F33E99;
+        /* AQUI altera a cor da letra */
+        color: #FFFFFF;
+        display: inline-table;
+        /* AQUI altera o tamanho da letra */
+        font-size: 15px;
+        /* AQUI altera a altura da caixa */
+        height: 13px;
+        z-index: 1;
+        position: inherit;
+        top: 0;
+        left: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <div id="container-cidade">Aguarde um momento...</div>
+    
+  </head>
+  <body>
+    
+    <!-- Gatilho de Escassez -->
+    <h5 style="text-align:center"><span style="color:#FFFFFF"><strong><span style="background-color:#FF0000">ATEN&Ccedil;&Atilde;O: N&atilde;o feche ou atualize esta p&aacute;gina para n&atilde;o gerar erro ou duplicidade na sua compra</span></strong></span></h5>
+
+    <p>&nbsp;</p>
+
+    <h3 style="text-align:center"><span style="color:#ffcc00"><strong>PARAB&Eacute;NS! </strong></span></h3>
+
+    <h3 style="text-align:center"><span style="color:#ffcc00"><strong>VOC&Ecirc; J&Aacute; GARANTIU SEU ACESSO AO M&Eacute;TODO QUEIMA ROXA, MAS...</strong></span></h3>
+
+    <header class="py-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+
+            <!-- Headline -->
+            <h5 class="my-4"><b>Tenho um recado importante para você! Assista ao vídeo de 3 minutos abaixo...</b></h5>
+
+            <!-- VSL -->
+            <script type="text/javascript" id="scr_6269d56973e6e9000b72fc7e">var s=document.createElement("script");s.src="https://scripts.converteai.net/d815fe39-ff04-485e-bb34-dd508e30df56/players/6269d56973e6e9000b72fc7e/player.js",s.async=!0,document.head.appendChild(s);</script>
+
+            <div class="text-white mt-4"><p><span style="color:#FFFFFF"><strong><img src="./assets/img/sound.png" alt="Image" height="15" width="15"> Verifique se seu som est&aacute; ligado</strong></span>
+
+            <!-- Botão -->
+            <!-- <div id="cta1" class="mt-4 d-none">
+                <div style="text-align:center">
+                  <button id="kiwify-upsell-trigger-ocGv6JM" style="background-color:#23cf5c;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #23cf5c;font-size:20px;">SIM, QUERO MINHA PELE LISINHA E SEM FLACIDEZ</button>
+
+                    <h3>&nbsp;</h3>
+
+                  <div id="kiwify-upsell-cancel-trigger" style="padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:300;border-radius:4px;border:2px solid #FF0000;font-size:19px;">Não, desejo encarar a flacidez pós emagrecimento...</div>
+                
+                </div><script> 
+                  let nextUpsellURL = "";
+                  let nextDownsellURL = "https://metodoqueimaroxa.com.br/downselling-1";</script><script src="https://kiwify-snippets.netlify.app/upsell/upsell.min.js"></script>
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- <script type="text/javascript">
+      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none")}, 1000); // temporização da Call to Action (em milissegundos)
+    </script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./assets/js/com.js"></script>
+  </body>
+</html>

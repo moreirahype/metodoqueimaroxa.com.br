@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/com.css">
+
+    <!-- Título da Página -->
+    <title>Método Queima Roxa</title>
+    
+    <style type="text/css">
+      body {
+        color: white;
+        background-image: url("assets/img/bg.jpeg");
+        background-color: rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: darken;
+      }
+    </style>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(window).on('load', function () {
+
+        $.ajax({
+          url: "https://geolocation-db.com/jsonp",
+          jsonpCallback: "callback",
+          dataType: "jsonp",
+          success: function (location) {
+            var data = new Date(),
+              dia = data.getDate().toString().padStart(2, '0'),
+              mes = (data.getMonth() + 1).toString().padStart(2, '0'), //+1 pois no getMonth Janeiro começa com zero.
+              ano = data.getFullYear();
+            
+            data = dia + '/' + mes + '/' + ano;
+
+            //AQUI altera o texto ANTES do nome da cidade
+            textoAntesCidade = 'Você e algumas pessoas próximo a ';
+            //AQUI altera o texto DEPOIS do nome da cidade
+            textoDepoisCidade = ' foram selecionadas para ver este vídeo até o dia ';
+
+            mostrarData = true; //SE não quiser que a data apareça é só mudar o valor 'true' para 'false' e vice-versa para mostrar novamente 
+            
+            if(location.city)
+              $('#container-cidade').html(textoAntesCidade + location.city + textoDepoisCidade + (mostrarData ? data : ''));
+          }
+        });
+      });
+    </script>
+    <style>
+      #container-cidade {
+        padding: 1rem;
+        width: 100%;
+        /* AQUI altera a cor de fundo da caixa */
+        background-color: #F33E99;
+        /* AQUI altera a cor da letra */
+        color: #FFFFFF;
+        display: inline-table;
+        /* AQUI altera o tamanho da letra */
+        font-size: 15px;
+        /* AQUI altera a altura da caixa */
+        height: 13px;
+        z-index: 1;
+        position: inherit;
+        top: 0;
+        left: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <div id="container-cidade">Aguarde um momento...</div>
+
+  </head>
+  <body>
+    
+    <!-- Gatilho de Escassez -->
+    <h5 style="text-align: center;"><span style="color:#FFFFFF"><strong><span style="background-color:#FF0000">CUIDADO: N&atilde;o feche esta p&aacute;gina ainda.</span></strong></span></h5>
+
+    <p style="text-align: center;">&nbsp;</p>
+
+    <h1 style="text-align: center;"><span style="color:#00cc00"><strong>ESPERE! </strong></span></h1>
+
+    <p style="text-align: center;">&nbsp;</p>
+
+    <h5 style="text-align: center;"><strong>VOC&Ecirc; GANHOU UM DESCONTO EXCLUSIVO PARA OS PR&Oacute;XIMOS 5 MINUTOS!</strong></h5>
+
+    <p style="text-align: center;">&nbsp;</p>
+
+    <h2 style="text-align: center;">SOMENTE AGORA: VOU LIBERAR PARA VOC&Ecirc; O ACESSO IMEDIATO AO ANTI-FLACIDEZ 12P</h2>
+
+    <h2 style="text-align: center;">COM QUASE <em><strong>50%</strong></em> DE DESCONTO,</h2>
+
+    <h3 style="text-align: center;">POR APENAS:</h3>
+
+    <p style="text-align: center;">&nbsp;</p>
+
+    <h1 style="text-align: center;"><strong><span style="color:#00cc00"><em><u>*27,00*</u></em></span></strong></h1>
+
+    <p style="text-align: center;">&nbsp;</p>
+
+    <h3 style="text-align: center;"><span style="color:#00cc00"><strong><span style="background-color:#000000">Essa &eacute; a &uacute;nica oportunidade de adquirir o pacote pelo pre&ccedil;o super&nbsp;reduzido de R$27</span></strong></span></h3>
+
+    <p style="text-align: center;">&nbsp;</p>
+
+    <h4 style="text-align: center;">Essa oferta n&atilde;o estar&aacute; dispon&iacute;vel em nenhum outro lugar, somente nessa p&aacute;gina agora!</h4>
+
+    <h4 style="text-align: center;">Para o seu processo de transforma&ccedil;&atilde;o corporal&nbsp;ser completo, disponibilizamos esse desconto &uacute;nico nos pr&oacute;ximos 5 minutos.</h4>
+
+    <h4 style="text-align: center;">Role a tela para baixo para saber tudo ao que voc&ecirc; ter&aacute; acesso ao incluir o &quot;<strong>ANTI-FLACIDEZ 12P</strong>&quot; ao seu pacote.</h4>
+
+    <p style="text-align: center;">&nbsp;</p>
+
+    <h2 style="text-align: center;"><span style="color:#00cc00"><strong>VEJA O QUE VOC&Ecirc; VAI LEVAR:</strong></span></h2>
+
+    <p style="text-align: center;">&nbsp;</p>
+
+    <h2 style="text-align: center;"><span style="color:#ffcc00"><span style="background-color:rgb(0, 0, 0)"><strong>ANTI-FLACIDEZ 12P:</strong></span></span></h2>
+
+    <p style="text-align: center;">&nbsp;</p>
+
+    <center><img src="./assets/img/mockup.png" alt="Image" height="250" width="370"></center> 
+
+    <h5 style="text-align: center;">✅ <span dir="LTR">12 simples passos que diminuem em 93% a possibilidade de flacidez p&oacute;s-emagrecimento&nbsp;utilizando o M&eacute;todo Queima Roxa.</span></h5>
+
+    <h5 style="text-align: center;">&nbsp;</h5>
+
+    <h5 style="text-align: center;">✅ E<span dir="LTR">xerc&iacute;cios, para voc&ecirc; fazer de casa mesmo, em menos de 5 minutos por dia, que far&atilde;o&nbsp;a musculatura ficar mais forte, aumentando em at&eacute; 3x o emagrecimento em geral e deixando a pele mais firme.</span></h5>
+
+    <h5 style="text-align: center;">&nbsp;</h5>
+
+    <h5 style="text-align: center;">✅ Complemento perfeito ao MQR com maior enfoque&nbsp;<span dir="LTR">nas regi&otilde;es com maior perda de tecido adiposo, onde sua pele possui maiores chances de ficar fl&aacute;cida.</span></h5>
+
+    <h5 style="text-align: center;">&nbsp;</h5>
+
+    <h3 style="text-align: center;"><span style="color:#00cc00"><strong>ENT&Atilde;O, CLIQUE J&Aacute; EM QUERO ADICIONAR AO MEU PACOTE E RECEBA O &quot;ANTI-FLACIDEZ 12P&quot; COM 50% DE DESCONTO SOMENTE AGORA!</strong></span></h3>
+
+    <p style="text-align: center;">&nbsp;</p>
+
+    <h5 style="text-align: center;"><strong>ATEN&Ccedil;&Atilde;O, essa oferta n&atilde;o estar&aacute; dispon&iacute;vel em nenhum outro lugar e nenhum outro site. Essa &eacute; uma oferta rel&acirc;mpago que ir&aacute; sumir ao fechar esta p&aacute;gina.</strong></h5>
+
+    <header class="py-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+
+            <!-- Botão -->
+            <div style="text-align:center">
+            <button id="kiwify-upsell-trigger-2KFVNFP" style="background-color:#23cf5c;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #23cf5c;font-size:20px;">SIM, QUERO ADICIONAR AO MEU PACOTE COM 50% DE DESCONTO</button>
+
+            <h3>&nbsp;</h3>
+
+            <div id="kiwify-upsell-cancel-trigger" style="padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:300;border-radius:4px;border:2px solid #FF0000;font-size:19px;">Não, não quero adicionar ao meu pacote</div>
+            </div><script> 
+            let nextUpsellURL = "";
+            let nextDownsellURL = "";</script><script src="https://kiwify-snippets.netlify.app/upsell/upsell.min.js"></script>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./assets/js/com.js"></script>
+  </body>
+</html>
