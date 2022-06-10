@@ -23,6 +23,7 @@
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '783090549769434');
+      fbq('track', 'PageView');
       fbq('track', 'ViewContent');
     </script>
     <noscript><img height="1" width="1" style="display:none"
@@ -60,9 +61,9 @@
   <script>
 
       $.ajax({
-        url: "https://geolocation-db.com/jsonp",
-        jsonpCallback: "callback",
-        dataType: "jsonp",
+        url: "https://ipinfo.io/json",
+        jsonCallback: "callback",
+        dataType: "json",
         success: function (location) {
           var data = new Date(),
             dia = data.getDate().toString().padStart(2, '0'),
@@ -78,12 +79,12 @@
 
           mostrarData = true; //SE não quiser que a data apareça é só mudar o valor 'true' para 'false' e vice-versa para mostrar novamente 
           
-          if(location.city)
             $('#container-cidade').html(textoAntesCidade + location.city + textoDepoisCidade + (mostrarData ? data : ''));
         }
       });
 
   </script>
+  
   <style>
     #container-cidade {
       padding: 1rem;
